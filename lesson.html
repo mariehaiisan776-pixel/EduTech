@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Academy — Lesson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lesson-page">
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="courses.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+            Edu<span class="accent">Tech</span>
+        </a>
+        <div class="header-right">
+            <button class="menu-toggle" onclick="toggleSidebar()">
+                <i class="fas fa-list-ul"></i>
+            </button>
+            <div class="user-avatar">A</div>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-course-name" id="sidebarCourseName"></div>
+                <div class="sidebar-title">Course Lessons</div>
+            </div>
+            <div id="lessonList"></div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="lesson-main-content">
+
+            <!-- VIDEO -->
+            <div class="video-section">
+                <iframe id="videoFrame"
+                    src="https://www.youtube.com/embed/ad79nYk2keg?rel=0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- LESSON INFO -->
+            <div class="lesson-info-section">
+                <div class="breadcrumb">
+                    <a href="courses.html">Courses</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <a href="#" id="breadCourse">Course</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span id="breadLesson">Lesson</span>
+                </div>
+
+                <h1 class="lesson-title" id="lessonTitle">Loading...</h1>
+
+                <div class="lesson-meta-bar">
+                    <div class="lesson-meta-item"><i class="fas fa-clock"></i><span id="lessonDur">-</span></div>
+                    <div class="lesson-meta-item"><i class="fas fa-user"></i><span id="lessonInstructor">-</span></div>
+                    <div class="lesson-meta-item" id="lessonDoneTag" style="display:none">
+                        <i class="fas fa-check-circle" style="color:var(--success)"></i>
+                        <span style="color:var(--success)">Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTION BAR -->
+            <div class="action-bar">
+                <button class="nav-btn prev" id="prevBtn" onclick="goLesson(-1)">
+                    <i class="fas fa-arrow-right"></i> Previous
+                </button>
+                <button class="nav-btn mark-done" id="markDoneBtn" onclick="markDone()">
+                    <i class="fas fa-check"></i> Mark as Done
+                </button>
+                <span class="lesson-counter" id="lessonCounter"></span>
+                <button class="nav-btn next" id="nextBtn" onclick="goLesson(1)">
+                    Next <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

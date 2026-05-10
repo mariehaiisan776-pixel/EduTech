@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Academy — Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="course-page">
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="courses.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+            Edu<span class="accent">Tech</span>
+        </a>
+        <div class="header-right">
+            <button class="menu-toggle" onclick="toggleSidebar()">
+                <i class="fas fa-list-ul"></i>
+            </button>
+            <div class="user-avatar">A</div>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title" id="sidebarTitle">Course Lessons</div>
+                <div class="sidebar-progress">
+                    <span>Progress</span><span id="sidebarPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="sidebarBar" style="width:0%"></div>
+                </div>
+            </div>
+            <div class="lesson-list" id="lessonList"></div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="course-main-content">
+            <a href="courses.html" class="back-link">
+                <i class="fas fa-arrow-right"></i> Back to Courses
+            </a>
+
+            <div class="course-hero" id="courseHero">
+                <div class="hero-left">
+                    <div class="hero-cat" id="heroCat"></div>
+                    <h1 class="hero-title" id="heroTitle">Loading...</h1>
+                    <p class="hero-desc" id="heroDesc"></p>
+                    <div class="tags" id="heroTags"></div>
+                    <div class="hero-meta" id="heroMeta"></div>
+                    <a class="btn btn-primary" id="heroBtn" href="#">
+                        <i class="fas fa-play"></i> Start Course
+                    </a>
+                </div>
+                <div class="hero-icon-wrap" id="heroIconWrap">
+                    <i class="fas fa-brain" id="heroIcon"></i>
+                </div>
+            </div>
+
+            <div class="progress-card">
+                <div class="progress-card-header">
+                    <span class="progress-card-title">Your Progress</span>
+                    <span class="progress-num" id="progressNum">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="mainBar" style="width:0%"></div>
+                </div>
+                <div class="progress-stats" id="progressStats"></div>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

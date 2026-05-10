@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Academy — Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="courses-page">
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="courses.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+            Edu<span class="accent">Tech</span>
+        </a>
+
+        <div class="header-right">
+            <div class="user-avatar" onclick="handleLogout()">A</div>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-label"><i class="fas fa-fire"></i> Learn at your own pace</div>
+                <h1>Explore Our Courses</h1>
+                <p>Master in-demand skills with expert-led courses designed for the modern learner.</p>
+                <div class="stats-row">
+                    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Courses</div></div>
+                    <div class="stat"><div class="stat-num">20</div><div class="stat-label">Lessons</div></div>
+                    <div class="stat"><div class="stat-num">12K+</div><div class="stat-label">Students</div></div>
+                    <div class="stat"><div class="stat-num">4.8★</div><div class="stat-label">Avg. Rating</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN -->
+        <main class="main-content">
+                <div class="search-input-wrap">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-field" id="searchField" placeholder="Search courses...">
+                </div>
+            </div>
+            <div class="courses-grid" id="coursesGrid"></div>
+        </main>
+
+    </div>
+
+    <div class="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
